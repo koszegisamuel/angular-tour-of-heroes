@@ -1,5 +1,15 @@
+<h2>Add a Hero</h2>
+<form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+    <label for="">
+        Hero Name:
+        <input type="text" formControlName="heroName"> 
+    </label>
+<!-- A form Control name levalidálja amit a TS-ben emgadtunk, azaz összepárosítja a mezővel -->
+    <button [disabled]="!heroForm.valid" type="submit">Save</button>
+</form>
+
 <h2>Top Heroes</h2>
-<div class="heroes-menu">
+<div *ngIf=heroes class="heroes-menu">
     <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
         {{hero.name}}
     </a>
