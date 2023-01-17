@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeroesComponent, HeroDetailComponent,  } from './_components';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './_components/dashboard/dashboard.component';
+import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
 
 
 
@@ -16,7 +17,8 @@ import { DashboardComponent } from './_components/dashboard/dashboard.component'
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Hero } from '@app/_models/hero';
+import { catchError, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 // import { Hero, HEROES } from '@app/_models';
 // import { Observable, of } from 'rxjs';
@@ -46,6 +47,23 @@ export class HeroService {
     }
 
     addHero(hero: Hero){
-      return this.http.post<Hero>(`${environment.apiUrl}/posts`, hero, httpOption);
+      return this.http.post<Hero>(`${environment.apiUrl}/posts`, hero, httpOption).pipe(
+        tap(hero => console.log(`inserted hero = ${JSON.stringify(hero)}`)),
+        catchError(error => error)
+      );
+    }
+
+    updateHero(hero: Hero) {
+      return this.http.put<Hero>(`${environment.apiUrl}/posts/${hero.id}`, hero, httpOption).pipe(
+        tap(updatedHero => console.log(`updated hero = ${JSON.stringify(updatedHero)}`)),
+        catchError(error => error)
+      )
+    }
+
+    deleteHero(heroId: Number) {
+      return this.http.delete<Hero>(`${environment.apiUrl}/posts/${heroId}`, httpOption).pipe(
+        tap(updatedHero => console.log(`deleted hero with ID =  ${heroId}`)),
+        catchError(error => error)
+      )
     }
 }
