@@ -38,6 +38,11 @@ h2 {
     align-self: auto;
   }
   
+form {
+  display: flex;
+  flex-direction: column;
+}
+
   @media (min-width: 600px) {
     a {
       width: 18%;

@@ -5,20 +5,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeroesComponent, HeroDetailComponent,  } from './_components';
+import { ArticlesComponent, ArticleDetailComponent,  } from './_components';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './_components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
+import { SendTranslationComponent } from './_components/send-translation/send-translation.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
+    ArticlesComponent,
+    ArticleDetailComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SendTranslationComponent
   ],
   imports: [
     BrowserModule,

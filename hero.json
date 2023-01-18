@@ -1,15 +1,11 @@
 {
   "posts": [
     {
-      "name": "Black Panthers",
-      "id": 4
-    },
-    {
       "name": "Black Widows",
       "id": 5
     },
     {
-      "name": "Hulk is gay",
+      "name": "Hulk ",
       "id": 6
     },
     {
@@ -27,10 +23,6 @@
     {
       "name": "BomberMan",
       "id": 11
-    },
-    {
-      "name": "Hi",
-      "id": 12
     },
     {
       "name": "New hero",

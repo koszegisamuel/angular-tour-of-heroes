@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Hero } from '@app/_models/hero';
+import { Article } from '@app/_models/article';
 import { catchError, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 // import { Hero, HEROES } from '@app/_models';
@@ -16,7 +16,7 @@ const httpOption = {
 @Injectable({
   providedIn: 'root'
 })
-export class HeroService {
+export class ArticleService {
 
   constructor(
     // public messageService: MessageService
@@ -38,30 +38,30 @@ export class HeroService {
 // }
 
 
-    getAllHeroes() {
-      return this.http.get<Hero[]>(`${environment.apiUrl}/posts`, httpOption)
+    getAllArticles() {
+      return this.http.get<Article[]>(`${environment.apiUrl}/posts`, httpOption)
     }
 
-    getHeroById(heroId: Number){
-      return this.http.get<Hero>(`${environment.apiUrl}/posts/${heroId}`, httpOption)
+    getArticleById(articleId: Number){
+      return this.http.get<Article>(`${environment.apiUrl}/posts/${articleId}`, httpOption)
     }
 
-    addHero(hero: Hero){
-      return this.http.post<Hero>(`${environment.apiUrl}/posts`, hero, httpOption).pipe(
-        tap(hero => console.log(`inserted hero = ${JSON.stringify(hero)}`)),
+    addArticle(article: Article){
+      return this.http.post<Article>(`${environment.apiUrl}/posts`, article, httpOption).pipe(
+        tap(hero => console.log(`inserted hero = ${JSON.stringify(article)}`)),
         catchError(error => error)
       );
     }
 
-    updateHero(hero: Hero) {
-      return this.http.put<Hero>(`${environment.apiUrl}/posts/${hero.id}`, hero, httpOption).pipe(
-        tap(updatedHero => console.log(`updated hero = ${JSON.stringify(updatedHero)}`)),
+    updateArticle(article: Article) {
+      return this.http.put<Article>(`${environment.apiUrl}/posts/${article.id}`, article, httpOption).pipe(
+        tap(updatedArticle => console.log(`updated article = ${JSON.stringify(updatedArticle)}`)),
         catchError(error => error)
       )
     }
 
-    deleteHero(heroId: Number) {
-      return this.http.delete<Hero>(`${environment.apiUrl}/posts/${heroId}`, httpOption).pipe(
+    deleteArticle(heroId: Number) {
+      return this.http.delete<Article>(`${environment.apiUrl}/posts/${heroId}`, httpOption).pipe(
         tap(updatedHero => console.log(`deleted hero with ID =  ${heroId}`)),
         catchError(error => error)
       )

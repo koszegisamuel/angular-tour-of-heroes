@@ -4,15 +4,14 @@ import { Article } from '@app/_models';
 import { ArticleService } from '@app/_services';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-send-translation',
+  templateUrl: './send-translation.component.html',
+  styleUrls: ['./send-translation.component.css']
 })
-export class DashboardComponent implements OnInit {
-
+export class SendTranslationComponent implements OnInit {
   articles: Article[] = [];
   articleForm!: FormGroup;
-  //a definite assignment assertion - a változónak futás közben is lesz értéke
+  
   constructor(private articleService: ArticleService,
     private fb: FormBuilder) { }
 

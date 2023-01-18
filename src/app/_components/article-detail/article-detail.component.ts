@@ -1,38 +1,38 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Hero } from '@app/_models';
+import { Article } from '@app/_models';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { HeroService } from '@app/_services';
+import { ArticleService } from '@app/_services';
 
 @Component({
   selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html',
-  styleUrls: ['./hero-detail.component.css']
+  templateUrl: './article-detail.component.html',
+  styleUrls: ['./article-detail.component.css']
 })
-export class HeroDetailComponent implements OnInit {
-  hero!: Hero;
+export class ArticleDetailComponent implements OnInit {
+  article!: Article;
 
   constructor(
     private route: ActivatedRoute,
-    private heroService: HeroService,
+    private articleService: ArticleService,
     private location: Location
 
   ) { }
 
   ngOnInit(): void {
-    this.getHeroById();
+    this.getArticleById();
   }
 
-  getHeroById(): void {
+  getArticleById(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.heroService.getHeroById(id)
-      .subscribe(hero => this.hero = hero);
-        
+    this.articleService.getArticleById(id)
+      .subscribe(article => this.article = article);
+    
   }
 
   save(): void {
-    this.heroService.updateHero(this.hero).subscribe(
+    this.articleService.updateArticle(this.article).subscribe(
       () => this.goBack()
     );
   }
@@ -40,7 +40,7 @@ export class HeroDetailComponent implements OnInit {
   delete(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     confirm("Are you sure you want to delete this hero?")
-    ?  this.heroService.deleteHero(id).subscribe(
+    ?  this.articleService.deleteArticle(id).subscribe(
       () => this.goBack()
     )
     : "";

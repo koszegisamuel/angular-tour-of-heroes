@@ -1,4 +1,4 @@
-<h2>Add a new translation</h2>
+<h2>Itt küld be a fordításaidat</h2>
 
 <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
     <label for="title">
@@ -46,10 +46,3 @@
    
     <button style="width: 100px;" [disabled]="!articleForm.valid" type="submit">Send</button>
 </form>
-
-<h2>Legutóbbi megjelenések</h2>
-<div *ngIf=articles class="heroes-menu">
-    <a *ngFor="let article of articles" routerLink="detail/{{article.id}}">
-        {{article.title}}
-    </a>
-</div>
