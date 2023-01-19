@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './_components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
 import { SendTranslationComponent } from './_components/send-translation/send-translation.component';
+import { MainPageComponent } from './_components/main-page/main-page.component'
 
 
 
@@ -20,7 +21,8 @@ import { SendTranslationComponent } from './_components/send-translation/send-tr
     ArticleDetailComponent,
     DashboardComponent,
     PageNotFoundComponent,
-    SendTranslationComponent
+    SendTranslationComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

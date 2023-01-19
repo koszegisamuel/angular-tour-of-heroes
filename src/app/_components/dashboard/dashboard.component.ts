@@ -35,7 +35,8 @@ export class DashboardComponent implements OnInit {
       translator: ['', Validators.required],
       translationDate: ['', Validators.required],
       category: ['', Validators.required],
-      translation: ['', Validators.required]
+      translation: ['', Validators.required],
+      isPublished: ['', Validators.required]
     })
   }
 
@@ -49,7 +50,7 @@ export class DashboardComponent implements OnInit {
       translationDate: this.articleForm.value.translationDate,
       category: this.articleForm.value.category,
       translation: this.articleForm.value.translation,
-      isPublished: "nem",
+      isPublished: this.articleForm.value.isPublished,
       imagePath: "",
       filePath: "",
       readNum: 0,

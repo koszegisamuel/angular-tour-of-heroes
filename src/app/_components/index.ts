@@ -3,3 +3,4 @@ export * from './articles/articles.component';
 export * from './dashboard/dashboard.component'
 export * from './page-not-found/page-not-found.component'
 export * from './send-translation/send-translation.component'
+export * from './main-page/main-page.component'

@@ -3,12 +3,12 @@
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
             <h4 style="color: whitesmoke; padding: 10px;">{{title}}</h4>
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-5 d-none d-sm-inline">Menu</span>
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
-                        <a href="#" class="nav-link align-middle px-0">
+                        <a routerLink="/" class="nav-link align-middle px-0">
                             <i class="bi-alarm"></i> <span class="ms-1 d-none d-sm-inline">Kezdőlap</span>
                         </a>
                     </li>
@@ -87,10 +87,10 @@
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Admin area</span> </a>
                         <ul class="collapse nav flex-column ms-1" id="submenu5" data-bs-parent="#menu">
                             <li class="w-100">
-                                <a routerLink="/dashboard" class="nav-link px-0"> <span class="d-none d-sm-inline">Dashboard</span></a>
+                                <a routerLink="/admin/dashboard" class="nav-link px-0"> <span class="d-none d-sm-inline">Dashboard</span></a>
                             </li>
                             <li>
-                                <a routerLink="/admin/published-list" class="nav-link px-0"> <span class="d-none d-sm-inline">Published List</span></a>
+                                <a routerLink="/admin/published-list" class="nav-link px-0"> <span class="d-none d-sm-inline">Jóváhagyott fordítások</span></a>
                             </li>
                             
                         </ul>

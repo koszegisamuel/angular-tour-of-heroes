@@ -1,8 +1,10 @@
-<h2>My published Articles</h2>
+<h2>Jóváhagyott fordítások listája</h2>
 <ul class="heroes">
     <li *ngFor="let article of articles">
         <a routerLink="/detail/{{article.id}}">
             <span class="badge">{{article.id}}</span> {{article.title}}
+            <br>
+            szerző: {{article.author}}
         </a>
     </li>
 </ul>

@@ -1,55 +1,85 @@
-<h2>Add a new translation</h2>
+<div class="container">
+    <div class="row text-center">
+        <h2>Jóváhagyandó fordítások</h2>
+        <div *ngIf=articles class="heroes-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-3"></div>
+                    <a *ngFor="let article of articles" routerLink="detail/{{article.id}}">
+                        <div class="card">
 
-<form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
-    <label for="title">
-        Article Title:
-        <input type="text" formControlName="title" id="title">
-    </label>
+                            <div class="card-body">
+                                <h4 class="card-title">{{article.title}}</h4>
+                                <p class="card-text">written by {{article.author}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <label for="author">
-        Author:
-        <input type="text" formControlName="author" id="author">
-    </label>
+</div>
 
-    <label for="originalTitle">
-        Original Title:
-        <input type="text" formControlName="originalTitle" id="originalTitle">
-    </label>
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <h2>Új fordítás hozzáadása</h2>
 
-    <label for="originalDate">
-        Original Date:
-        <input type="date" formControlName="originalDate" id="originalDate">
-    </label>
+        <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+            <label for="title">
+                Article Title:
+                <input type="text" formControlName="title" id="title">
+            </label>
 
-    <label for="translator">
-        Translator:
-        <input type="text" formControlName="translator" id="translator">
-    </label>
+            <label for="author">
+                Author:
+                <input type="text" formControlName="author" id="author">
+            </label>
 
-    <label for="translationDate">
-        Translation Date:
-        <input type="date" formControlName="translationDate" id="translationDate">
-    </label>
+            <label for="originalTitle">
+                Original Title:
+                <input type="text" formControlName="originalTitle" id="originalTitle">
+            </label>
 
-    <label for="category" class="form-label">Kategória</label>
-    <select class="form-select form-select-" name="category" id="category" formControlName="category"
-        style="width: 300px;">
-        <option value="vers">Vers</option>
-        <option value="novella">Novella</option>
-        <option value="dalszöveg">Dalszöveg</option>
+            <label for="originalDate">
+                Original Date:
+                <input type="date" formControlName="originalDate" id="originalDate">
+            </label>
 
-    </select>
+            <label for="translator">
+                Translator:
+                <input type="text" formControlName="translator" id="translator">
+            </label>
 
-    <label for="translation" class="form-label">Fordítás</label>
-    <textarea type="text" class="form-control form-control-sm" formControlName="translation" name="translation" id="translation" style="width: 600px;" placeholder=""
-        rows="10" cols="50"></textarea>
-   
-    <button style="width: 100px;" [disabled]="!articleForm.valid" type="submit">Send</button>
-</form>
+            <label for="translationDate">
+                Translation Date:
+                <input type="date" formControlName="translationDate" id="translationDate">
+            </label>
 
-<h2>Legutóbbi megjelenések</h2>
-<div *ngIf=articles class="heroes-menu">
-    <a *ngFor="let article of articles" routerLink="detail/{{article.id}}">
-        {{article.title}}
-    </a>
+            <label for="category" class="form-label">Kategória</label>
+            <select class="form-select form-select-" name="category" id="category" formControlName="category"
+                style="width: 300px;">
+                <option value="vers">Vers</option>
+                <option value="novella">Novella</option>
+                <option value="dalszöveg">Dalszöveg</option>
+
+            </select>
+
+            <label for="translation" class="form-label">Fordítás</label>
+            <textarea type="text" class="form-control form-control-sm" formControlName="translation" name="translation"
+                id="translation" style="width: 600px;" placeholder="" rows="10" cols="50"></textarea>
+
+            <label for="isPublished" class="form-label">Szeretnéd publikálni?</label>
+            <select class="form-select form-select-" name="isPublished" id="isPublished" formControlName="isPublished"
+                style="width: 300px;">
+                <option value="nem">Nem</option>
+                <option value="igen">Igen</option>
+
+
+            </select>
+
+            <button style="width: 100px;" [disabled]="!articleForm.valid" type="submit">Send</button>
+        </form>
+    </div>
 </div>
