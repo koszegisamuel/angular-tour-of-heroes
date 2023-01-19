@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Article } from '@app/_models';
 import { ArticleService } from '@app/_services';
 
@@ -10,10 +9,9 @@ import { ArticleService } from '@app/_services';
 })
 export class MainPageComponent implements OnInit {
   articles: Article[] = [];
-  articleForm!: FormGroup;
+ 
   //a definite assignment assertion - a változónak futás közben is lesz értéke
-  constructor(private articleService: ArticleService,
-    private fb: FormBuilder) { }
+  constructor(private articleService: ArticleService) { }
 
   ngOnInit(): void {
     this.getArticles();
@@ -25,5 +23,6 @@ export class MainPageComponent implements OnInit {
       .subscribe(data => this.articles = data);
   }
 
+  
 
 }

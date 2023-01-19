@@ -10,7 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './_components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
 import { SendTranslationComponent } from './_components/send-translation/send-translation.component';
-import { MainPageComponent } from './_components/main-page/main-page.component'
+import { MainPageComponent } from './_components/main-page/main-page.component';
+import { PublishedArticleDetailComponent } from './_components/published-article-detail/published-article-detail.component'
 
 
 
@@ -22,7 +23,8 @@ import { MainPageComponent } from './_components/main-page/main-page.component'
     DashboardComponent,
     PageNotFoundComponent,
     SendTranslationComponent,
-    MainPageComponent
+    MainPageComponent,
+    PublishedArticleDetailComponent
   ],
   imports: [
     BrowserModule,

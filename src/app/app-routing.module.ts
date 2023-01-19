@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArticlesComponent } from '@app/_components/articles/articles.component';
-import { DashboardComponent, MainPageComponent, PageNotFoundComponent, SendTranslationComponent } from './_components';
+import { DashboardComponent, MainPageComponent, PageNotFoundComponent, PublishedArticleDetailComponent, SendTranslationComponent } from './_components';
 import { ArticleDetailComponent } from './_components';
 
 const routes: Routes = [
@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'send-translation', component: SendTranslationComponent },
   { path: '', component: MainPageComponent },
   { path: 'detail/:id', component: ArticleDetailComponent },
+  { path: 'published/detail/:id', component: PublishedArticleDetailComponent },
   { path: 'admin/dashboard/detail/:id', component: ArticleDetailComponent },
   { path: '**', component: PageNotFoundComponent}
 

@@ -1,9 +1,30 @@
-<h1>Üdvözlünk a Japán Szemle oldalán!</h1>
+<div class="container">
+    <div class="row text-center">
+        <h1>Üdvözlünk a Japán Szemle oldalán!</h1>
+    </div>
+</div>
 
+<div class="container">
+    <div class="row">
+        <h2>Legutóbbi megjelenések</h2>
+        <div *ngIf="articles" class="heroes-menu">
+            <div *ngFor="let article of articles">
+                <div *ngIf="article.isPublished === 'igen'">
+                    <div class="card text-start">
+                        <img class="card-img-top" src="" alt="Title">
+                        <div class="card-body">
+                            <h4 class="card-title">{{article.title}}</h4>
+                            <p class="card-text">Szerző: {{article.author}}</p>
+                            <p class="card-text">Fordította: {{article.translator}}</p>
+                        </div>
+                        <a routerLink="published/detail/{{article.id}}">
+                            Tovább
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
 
-<h2>Legutóbbi megjelenések</h2>
-<div *ngIf=articles class="heroes-menu">
-    <a *ngFor="let article of articles" routerLink="detail/{{article.id}}">
-        {{article.title}}
-    </a>
+        </div>
+    </div>
 </div>

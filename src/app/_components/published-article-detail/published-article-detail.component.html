@@ -1,0 +1,8 @@
+<div *ngIf="article">
+
+    <h2>{{article.title | uppercase}} Én MÁR PUBLISHE ARTICLE VAGYOK</h2>
+    <p>written by {{article.author}}</p>
+    <div><span>id: </span>{{article.id}}</div>
+
+</div>
+<button type="button" (click)="goBack()">go back</button>
