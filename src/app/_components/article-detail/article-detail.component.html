@@ -66,8 +66,18 @@
     </div>
 
     <div>
-        <label for="filePath">Kép elérési útja: </label>
+        <label for="filePath">Fájl elérési útja: </label>
         <input id="filePath" [(ngModel)]="article.filePath" placeholder="másold be a fájl elérési útját">
+    </div>
+
+    <div>
+        <label for="imagePath">Beküldő neve: </label>
+        <input id="imagePath" [(ngModel)]="article.sender" placeholder="beküldő">
+    </div>
+
+    <div>
+        <label for="imagePath">Beküldő email címe: </label>
+        <input id="imagePath" [(ngModel)]="article.emailAddress" placeholder="email">
     </div>
 
 

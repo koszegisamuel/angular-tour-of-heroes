@@ -34,7 +34,9 @@ export class SendTranslationComponent implements OnInit {
       translator: ['', Validators.required],
       translationDate: ['', Validators.required],
       category: ['', Validators.required],
-      translation: ['', Validators.required]
+      translation: ['', Validators.required],
+      sender: ['', Validators.required],
+      emailAddress: ['', Validators.required]
     })
   }
 
@@ -52,6 +54,8 @@ export class SendTranslationComponent implements OnInit {
       imagePath: "",
       filePath: "",
       readNum: 0,
+      sender: this.articleForm.value.sender,
+      emailAddress: this.articleForm.value.emailAddress
     };
 
     this.articleService.addArticle(obj)

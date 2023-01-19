@@ -53,6 +53,8 @@ export class DashboardComponent implements OnInit {
       isPublished: this.articleForm.value.isPublished,
       imagePath: "",
       filePath: "",
+      sender:"Admin",
+      emailAddress: "japanszemle@gmail.com",
       readNum: 0,
     };
 

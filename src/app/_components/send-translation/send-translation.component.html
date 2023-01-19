@@ -43,6 +43,18 @@
     <label for="translation" class="form-label">Fordítás</label>
     <textarea type="text" class="form-control form-control-sm" formControlName="translation" name="translation" id="translation" style="width: 600px;" placeholder=""
         rows="10" cols="50"></textarea>
+
+    <br>
+    <br>
+    <label for="sender">
+        Beküldő neve:
+        <input type="text" formControlName="sender" id="sender">
+    </label>
+
+    <label for="emailAddress">
+        Email címe:
+        <input type="email" formControlName="emailAddress" id="emailAddress">
+    </label>
    
     <button style="width: 100px;" [disabled]="!articleForm.valid" type="submit">Send</button>
 </form>

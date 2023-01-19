@@ -12,6 +12,8 @@ export interface Article {
     imagePath: string;
     filePath: string;
     readNum: number;
+    sender: string;
+    emailAddress: string;
 }
 
 // opcionális paramétert jelent a ? - a json server kezeli az id-kat
