@@ -1,10 +1,22 @@
 /* DashboardComponent's private CSS styles */
 
+.vers {
+  background-color: rgb(115, 255, 115);
+}
+
+.novella {
+  background-color: rgb(133, 133, 133);
+}
+
+.dalszöveg {
+  background-color: rgb(202, 96, 96);
+}
+
 h2 {
     text-align: center;
   }
   
-  .heroes-menu {
+  .article-list {
     padding: 0;
     margin: auto;
     max-width: 1000px;
@@ -19,13 +31,13 @@ h2 {
   }
   
   a {
-    background-color: #3f525c;
+    background-color: rgb(6, 6, 54);;
     border-radius: 2px;
     padding: 1rem;
     font-size: 1.2rem;
     text-decoration: none;
     display: inline-block;
-    color: #fff;
+    color: whitesmoke;
     text-align: center;
     width: 100%;
     min-width: 70px;
@@ -51,5 +63,6 @@ form {
   }
   
   a:hover {
-    background-color: #000;
+    background-color: whitesmoke;
+    color:rgb(6, 6, 54)
   }

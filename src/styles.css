@@ -1,43 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
-/* Application-wide Styles */
+ 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 h1 {
-    color: #369;
+    color: rgb(6, 6, 54);;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 250%;
   }
-  h2, h3 {
-    color: #444;
+
+h2, h3 {
+    color: rgb(6, 6, 54);;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
   }
  
-  body, input[type="text"], button {
-    color: #333;
+body, input[type="text"], button {
+    color: rgb(6, 6, 54);;
     font-family: Cambria, Georgia, serif;
   }
-  button {
+
+button {
     background-color: #eee;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    color: black;
+    color: #011a1b;
     font-size: 1.2rem;
     padding: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
-  button:hover {
+
+button:hover {
     background-color: black;
     color: white;
   }
-  button:disabled {
+
+button:disabled {
     background-color: #eee;
     color: #aaa;
     cursor: auto;
   }
   
-  /* everywhere else */
-  * {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+form {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 40px;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email] {
+    display: inline-block; 
+    padding: 10px; 
+    font-size: 18px; 
+    border: solid 2px black;
+    background-color: rgb(231, 231, 231) ;
+    color:#011a1b; 
+    font-weight: bold; 
+    width: 100%; 
+    margin-bottom: 2px;
+}
+
+textarea {
+  border: solid 2px black;
+  background-color: #e8e4e1; 
+  resize: none; 
+  width: 100%; 
+  font-size: 18px; 
+  color: #011a1b;
+}
+
+label, option {
+  display: inline-block; 
+  font-size: 22px; 
+  color: #011a1b;
+  font-weight: 550;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

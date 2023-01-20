@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { ArticleService } from '@app/_services';
+import { AuthService } from '@app/_services';
 
 @Component({
   selector: 'app-hero-detail',
@@ -16,7 +17,8 @@ export class ArticleDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private articleService: ArticleService,
-    private location: Location
+    private location: Location,
+    public auth: AuthService
 
   ) { }
 

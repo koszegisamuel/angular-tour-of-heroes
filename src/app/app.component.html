@@ -51,19 +51,19 @@
                             <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Magunkról</span> </a>
                             <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                             <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Céljaink</span> 1</a>
+                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Céljaink</span> </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Fordítóink</span> 2</a>
+                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Fordítóink</span> </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Szerkesztőink</span> 3</a>
+                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Szerkesztőink</span> </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Technikus csapat</span> 4</a>
+                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Technikus csapat</span> </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Támogatóink</span> 4</a>
+                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Támogatóink</span> </a>
                             </li>
                         </ul>
                     </li>
@@ -82,7 +82,7 @@
                         </ul>
                     </li>
 
-                    <li style="margin-top: 50px;">
+                    <li *ngIf="auth.loggedIn" style="margin-top: 50px;">
                         <a href="#submenu5" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Admin area</span> </a>
                         <ul class="collapse nav flex-column ms-1" id="submenu5" data-bs-parent="#menu">
@@ -92,6 +92,9 @@
                             <li>
                                 <a routerLink="/admin/published-list" class="nav-link px-0"> <span class="d-none d-sm-inline">Jóváhagyott fordítások</span></a>
                             </li>
+
+                            <button type="button" (click)="auth.logout()">Kijelentkezés</button>
+                    
                             
                         </ul>
                     </li>

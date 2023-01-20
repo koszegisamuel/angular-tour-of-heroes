@@ -1,89 +1,94 @@
-<div *ngIf="article">
+<div *ngIf="auth.loggedIn">
 
-    <h2>{{article.title | uppercase}} Details</h2>
-    <p>written by {{article.author}}</p>
-    <div><span>id: </span>{{article.id}}</div>
-    <div>
-        <label for="article-title">Article title: </label>
-        <input id="article-title" [(ngModel)]="article.title" placeholder="title">
+    <div *ngIf="article">
+
+        <h2>{{article.title | uppercase}} Details</h2>
+        <p>written by {{article.author}}</p>
+        <div><span>id: </span>{{article.id}}</div>
+        <div>
+            <label for="article-title">Article title: </label>
+            <input id="article-title" [(ngModel)]="article.title" placeholder="title">
+        </div>
+
+        <div>
+            <label for="author">Author: </label>
+            <input id="author" [(ngModel)]="article.author" placeholder="name">
+        </div>
+
+        <div>
+            <label for="originalTitle">Original title: </label>
+            <input id="originalTitle" [(ngModel)]="article.originalTitle" placeholder="name">
+        </div>
+
+        <div>
+            <label for="originalDate">Original date: </label>
+            <input type="date" id="originalDate" [(ngModel)]="article.originalDate" placeholder="name">
+        </div>
+
+        <div>
+            <label for="translator">Translator: </label>
+            <input id="translator" [(ngModel)]="article.translator" placeholder="name">
+        </div>
+
+        <div>
+            <label for="translationDate">Translation date: </label>
+            <input type="date" id="translationDate" [(ngModel)]="article.translationDate" placeholder="name">
+        </div>
+
+        <div>
+            <label for="category" class="form-label">Kategória</label>
+            <select class="form-select form-select-" [(ngModel)]="article.category" id="category" style="width: 300px;">
+                <option value="vers">Vers</option>
+                <option value="novella">Novella</option>
+                <option value="dalszöveg">Dalszöveg</option>
+
+            </select>
+        </div>
+
+        <div>
+            <label for="translation" class="form-label">Fordítás</label>
+            <textarea type="text" class="form-control form-control-sm" [(ngModel)]="article.translation"
+                id="translation" style="width: 600px;" placeholder="" rows="10" cols="50"></textarea>
+
+        </div>
+
+        <div>
+            <label for="isPublished" class="form-label">Szeretnéd publikálni az oldalra?</label>
+            <select class="form-select form-select-" [(ngModel)]="article.isPublished" id="isPublished"
+                style="width: 300px;">
+                <option value="nem">Nem</option>
+                <option value="igen">Igen</option>
+
+
+            </select>
+        </div>
+
+        <div>
+            <label for="imagePath">Kép elérési útja: </label>
+            <input id="imagePath" [(ngModel)]="article.imagePath" placeholder="másold be a kép elérési útját">
+        </div>
+
+        <div>
+            <label for="filePath">Fájl elérési útja: </label>
+            <input id="filePath" [(ngModel)]="article.filePath" placeholder="másold be a fájl elérési útját">
+        </div>
+
+        <div>
+            <label for="imagePath">Beküldő neve: </label>
+            <input id="imagePath" [(ngModel)]="article.sender" placeholder="beküldő">
+        </div>
+
+        <div>
+            <label for="imagePath">Beküldő email címe: </label>
+            <input id="imagePath" [(ngModel)]="article.emailAddress" placeholder="email">
+        </div>
+
+
+
+        <button (click)="save()">Save</button>
+        <button (click)="delete()">Delete</button>
+
     </div>
-
-    <div>
-        <label for="author">Author: </label>
-        <input id="author" [(ngModel)]="article.author" placeholder="name">
-    </div>
-
-    <div>
-        <label for="originalTitle">Original title: </label>
-        <input id="originalTitle" [(ngModel)]="article.originalTitle" placeholder="name">
-    </div>
-
-    <div>
-        <label for="originalDate">Original date: </label>
-        <input type="date" id="originalDate" [(ngModel)]="article.originalDate" placeholder="name">
-    </div>
-
-    <div>
-        <label for="translator">Translator: </label>
-        <input id="translator" [(ngModel)]="article.translator" placeholder="name">
-    </div>
-
-    <div>
-        <label for="translationDate">Translation date: </label>
-        <input type="date" id="translationDate" [(ngModel)]="article.translationDate" placeholder="name">
-    </div>
-
-    <div>
-        <label for="category" class="form-label">Kategória</label>
-        <select class="form-select form-select-" [(ngModel)]="article.category" id="category" style="width: 300px;">
-            <option value="vers">Vers</option>
-            <option value="novella">Novella</option>
-            <option value="dalszöveg">Dalszöveg</option>
-
-        </select>
-    </div>
-    
-    <div>
-        <label for="translation" class="form-label">Fordítás</label>
-        <textarea type="text" class="form-control form-control-sm" [(ngModel)]="article.translation" id="translation"
-            style="width: 600px;" placeholder="" rows="10" cols="50"></textarea>
-        
-    </div>
-
-    <div>
-        <label for="isPublished" class="form-label">Szeretnéd publikálni az oldalra?</label>
-        <select class="form-select form-select-" [(ngModel)]="article.isPublished" id="isPublished" style="width: 300px;">
-            <option value="nem">Nem</option>
-            <option value="igen">Igen</option>
-            
-
-        </select>
-    </div>
-
-    <div>
-        <label for="imagePath">Kép elérési útja: </label>
-        <input id="imagePath" [(ngModel)]="article.imagePath" placeholder="másold be a kép elérési útját">
-    </div>
-
-    <div>
-        <label for="filePath">Fájl elérési útja: </label>
-        <input id="filePath" [(ngModel)]="article.filePath" placeholder="másold be a fájl elérési útját">
-    </div>
-
-    <div>
-        <label for="imagePath">Beküldő neve: </label>
-        <input id="imagePath" [(ngModel)]="article.sender" placeholder="beküldő">
-    </div>
-
-    <div>
-        <label for="imagePath">Beküldő email címe: </label>
-        <input id="imagePath" [(ngModel)]="article.emailAddress" placeholder="email">
-    </div>
-
-
-
-    <button (click)="save()">Save</button>
-    <button (click)="delete()">Delete</button>
+    <button type="button" (click)="goBack()">go back</button>
 
 </div>
-<button type="button" (click)="goBack()">go back</button>

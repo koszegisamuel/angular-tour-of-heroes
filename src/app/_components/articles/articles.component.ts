@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from '@app/_services/article.service';
+import { AuthService } from '@app/_services';
 import { Article } from '@app/_models';
 
 
@@ -15,7 +16,7 @@ export class ArticlesComponent implements OnInit {
 
   // selectedArticle?: Article;
 
-  constructor(private articleService: ArticleService) { }
+  constructor(private articleService: ArticleService, public auth: AuthService) { }
 
   ngOnInit(): void {
       this.getArticles();

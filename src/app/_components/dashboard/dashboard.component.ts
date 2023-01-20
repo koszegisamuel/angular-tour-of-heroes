@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Article } from '@app/_models';
 import { ArticleService } from '@app/_services';
+import { AuthService } from '@app/_services';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +15,7 @@ export class DashboardComponent implements OnInit {
   articleForm!: FormGroup;
   //a definite assignment assertion - a változónak futás közben is lesz értéke
   constructor(private articleService: ArticleService,
-    private fb: FormBuilder) { }
+    private fb: FormBuilder, public auth: AuthService) { }
 
   ngOnInit(): void {
     this.getArticles();
