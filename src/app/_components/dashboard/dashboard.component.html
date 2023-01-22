@@ -12,7 +12,7 @@
 
                                     <div class="card-body">
                                         <h4 class="card-title">{{article.title}}</h4>
-                                        <p class="card-text">written by {{article.author}}</p>
+                                        <p class="card-text">írta: {{article.author}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -27,36 +27,36 @@
     <br><br><br>
     <div class="container">
         <div class="row">
-            <h2>Új fordítás hozzáadása</h2>
+            <h2>Új fordítás hozzáadása admin által</h2>
 
             <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
                 <label for="title">
-                    Article Title:
+                    Fordított cím:
                     <input type="text" formControlName="title" id="title">
                 </label>
 
                 <label for="author">
-                    Author:
+                    Szerző:
                     <input type="text" formControlName="author" id="author">
                 </label>
 
                 <label for="originalTitle">
-                    Original Title:
+                    Mű eredeti címe:
                     <input type="text" formControlName="originalTitle" id="originalTitle">
                 </label>
 
                 <label for="originalDate">
-                    Original Date:
+                    Mű alkotásának dátuma:
                     <input type="date" formControlName="originalDate" id="originalDate">
                 </label>
 
                 <label for="translator">
-                    Translator:
+                    Fordító neve:
                     <input type="text" formControlName="translator" id="translator">
                 </label>
 
                 <label for="translationDate">
-                    Translation Date:
+                    Fordítás dátuma:
                     <input type="date" formControlName="translationDate" id="translationDate">
                 </label>
 
@@ -68,11 +68,11 @@
 
                 </select>
 
-                <label for="translation" class="form-label">Fordítás</label>
+                <label for="translation" class="form-label">Fordító megjegyzése</label>
                 <textarea type="text" class="form-control form-control-sm" formControlName="translation"
                     name="translation" id="translation" placeholder="" rows="10" cols="50"></textarea>
 
-                <label for="isPublished" class="form-label">Szeretnéd publikálni?</label>
+                <label for="isPublished" class="form-label">Szeretnéd publikálni az oldalra?</label>
                 <select class="form-select form-select-" name="isPublished" id="isPublished"
                     formControlName="isPublished">
                     <option value="nem">Nem</option>
@@ -81,7 +81,7 @@
 
                 </select>
 
-                <button style="width: 100px;" [disabled]="!articleForm.valid" type="submit">Send</button>
+                <button style="width: 100px;" [disabled]="!articleForm.valid" type="submit">Feltöltés</button>
             </form>
         </div>
     </div>

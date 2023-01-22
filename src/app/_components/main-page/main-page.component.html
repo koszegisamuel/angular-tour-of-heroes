@@ -8,7 +8,7 @@
     <div class="row justify-content-center gy-3 mt-3 mb-4">
         <h2>Legutóbbi megjelenések</h2>
         <div *ngIf="articles" class="article-list">
-            <div class="col-12 col-md-6 col-lg-4 mt-4 h-100" *ngFor="let article of articles">
+            <div class="col-12 col-md-6 col-lg-4 mt-4 h-100" *ngFor="let article of articles ">
                 <div  *ngIf="article.isPublished === 'igen'">
                     <div class="card h-100 {{article.category}}">
                         <img class="card-img-top img-fluid"

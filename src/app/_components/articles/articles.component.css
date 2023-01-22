@@ -16,7 +16,7 @@
 }
 
 .igen {
-  background-color: #f5ebe0;
+  background-color: #d6cec5;
   color: #5e534d;
 }
 
@@ -38,7 +38,8 @@
 
 .articles a:hover {
   color: #2c3a41;
-  background-color: #e6e6e6;
+  background-color: #edede9;
+  border: #d6cec5 solid 2px;
 }
 
 .articles a:active {

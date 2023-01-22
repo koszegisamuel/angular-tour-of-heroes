@@ -1,20 +1,20 @@
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 mainnav">
-            <h4 class="mt-3 mb-4" style="color: whitesmoke; padding: 10px;">{{title}}</h4>
+            
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                 <a class="d-flex align-items-center pb-3 mb-md-4 me-md-auto text-white text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">Menü</span>
+                    <span class="fs-5 d-none d-sm-inline side-title">{{title}}</span>
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
                         <a routerLink="/" class="nav-link align-middle px-0">
-                            <i class="bi-alarm"></i> <span class="ms-1 d-none d-sm-inline">Kezdőlap</span>
+                            <i class="bi bi-house-door"></i> <span class="ms-1 d-none d-sm-inline">Kezdőlap</span>
                         </a>
                     </li>
                     <li>
                         <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-speedometer2"></i> <span
+                            <i class="fs-4 bi bi-translate"></i> <span
                                 class="ms-1 d-none d-sm-inline">Fordításaink</span> </a>
                         <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                             <li class="w-100">
@@ -31,7 +31,7 @@
 
                     <li>
                         <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Fordítás
+                            <i class="fs-4 bi bi-stickies"></i> <span class="ms-1 d-none d-sm-inline">Fordítás
                                 publikálása</span></a>
                         <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
                             <li class="w-100">
@@ -53,7 +53,7 @@
                     </li>
                     <li>
                         <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Magunkról</span> </a>
+                            <i class="fs-4 bi bi-person-lines-fill"></i> <span class="ms-1 d-none d-sm-inline">Magunkról</span> </a>
                         <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
                             <li class="w-100">
                                 <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Céljaink</span> </a>
@@ -79,7 +79,7 @@
 
                     <li>
                         <a href="#submenu4" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Jogi
+                            <i class="fs-4 bi bi-bag"></i> <span class="ms-1 d-none d-sm-inline">Jogi
                                 dolgaink</span> </a>
                         <ul class="collapse nav flex-column ms-1" id="submenu4" data-bs-parent="#menu">
                             <li class="w-100">
@@ -96,7 +96,7 @@
 
                     <li *ngIf="auth.loggedIn" style="margin-top: 50px;">
                         <a href="#submenu5" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Admin area</span>
+                            <i class="fs-4 bi bi-pencil-square"></i> <span class="ms-1 d-none d-sm-inline">Admin area</span>
                         </a>
                         <ul class="collapse nav flex-column ms-1" id="submenu5" data-bs-parent="#menu">
                             <li class="w-100">
