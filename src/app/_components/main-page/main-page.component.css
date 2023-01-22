@@ -1,21 +1,44 @@
 /* DashboardComponent's private CSS styles */
 
 .vers {
-  background-color: rgb(115, 255, 115);
+  background-color: #bea596;
 }
 
 .novella {
-  background-color: rgb(133, 133, 133);
+  background-color: #dfbfa8;
 }
 
 .dalszöveg {
-  background-color: rgb(202, 96, 96);
+  background-color: #ece3d9;
+}
+
+.category-label {
+  position: relative;
+  background-color: #5e534d;
+  padding: 2px 15px;
+  display: inline-block;
+  color: #f5ebe0;
+  font-size: 17px;
+  font-weight: 600;
+  
 }
 
 h2 {
     text-align: center;
   }
-  
+
+.card {
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.45);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
   .article-list {
     padding: 0;
     margin: auto;
@@ -32,7 +55,7 @@ h2 {
   
   a {
     background-color: rgb(6, 6, 54);;
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 1rem;
     font-size: 1.2rem;
     text-decoration: none;

@@ -1,8 +1,8 @@
 <div *ngIf="auth.loggedIn">
 <h2>Jóváhagyott fordítások listája</h2>
-<ul class="heroes">
+<ul class="articles">
     <li *ngFor="let article of articles">
-        <a routerLink="/detail/{{article.id}}">
+        <a routerLink="/detail/{{article.id}}" class="{{article.isPublished}}">
             <span class="badge">{{article.id}}</span> {{article.title}}
             <br>
             szerző: {{article.author}}

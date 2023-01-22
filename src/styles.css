@@ -2,29 +2,30 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
   }
+
+body {
+    background: #edede9;
+}
+
 h1 {
-    color: rgb(6, 6, 54);;
+    color: #5e534d;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 250%;
   }
 
 h2, h3 {
-    color: rgb(6, 6, 54);;
+    color: #5e534d;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
   }
  
-body, input[type="text"], button {
-    color: rgb(6, 6, 54);;
-    font-family: Cambria, Georgia, serif;
-  }
-
 button {
-    background-color: #eee;
+    background-color: #f5ebe0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    color: #011a1b;
+    color: #84756c;
+    transition: 0.3s;
     font-size: 1.2rem;
     padding: 1rem;
     margin-right: 1rem;
@@ -33,13 +34,13 @@ button {
   }
 
 button:hover {
-    background-color: black;
-    color: white;
+    background-color: #645952;
+    color: #d6ccc2;
   }
 
 button:disabled {
     background-color: #eee;
-    color: #aaa;
+    color: #5e534d;
     cursor: auto;
   }
   
@@ -52,32 +53,26 @@ form {
 }
 
 input[type=text],
-input[type=tel],
-input[type=email] {
+input[type=email],
+input[type=password],
+input[type=date], select option {
     display: inline-block; 
     padding: 10px; 
     font-size: 18px; 
-    border: solid 2px black;
-    background-color: rgb(231, 231, 231) ;
+    border: solid 2px #6c6059;
+    background-color: #f5ebe0 ;
     color:#011a1b; 
     font-weight: bold; 
     width: 100%; 
     margin-bottom: 2px;
 }
 
-textarea {
-  border: solid 2px black;
-  background-color: #e8e4e1; 
-  resize: none; 
-  width: 100%; 
-  font-size: 18px; 
-  color: #011a1b;
-}
+
 
 label, option {
   display: inline-block; 
   font-size: 22px; 
-  color: #011a1b;
+  color: #5e534d;
   font-weight: 550;
   padding-top: 10px;
   padding-bottom: 10px;

@@ -1,16 +1,16 @@
 <div class="container">
-    <div class="row text-center">
+    <div class="row text-center mt-4">
         <h1>Üdvözlünk a Japán Szemle oldalán!</h1>
     </div>
 </div>
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center gy-3 mt-3 mb-4">
         <h2>Legutóbbi megjelenések</h2>
         <div *ngIf="articles" class="article-list">
-            <div class="col-12 col-md-4 col-lg-3" *ngFor="let article of articles">
+            <div class="col-12 col-md-6 col-lg-4 mt-4 h-100" *ngFor="let article of articles">
                 <div  *ngIf="article.isPublished === 'igen'">
-                    <div class="card text-start {{article.category}}">
+                    <div class="card h-100 {{article.category}}">
                         <img class="card-img-top img-fluid"
                             src="{{article.imagePath}}"
                             alt="Title">

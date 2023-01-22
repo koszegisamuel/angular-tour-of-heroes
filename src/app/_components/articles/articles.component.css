@@ -1,24 +1,33 @@
 /* HeroesComponent's private CSS styles */
-.heroes {
+.articles {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 20px;
   
 }
-.heroes li {
+.articles li {
   position: relative;
   cursor: pointer;
   margin-top: 10px;
 }
 
-.heroes li:hover {
+.articles li:hover {
   left: .1em;
 }
 
-.heroes a {
+.igen {
+  background-color: #f5ebe0;
+  color: #5e534d;
+}
+
+.nem {
+  background-color: rgba(212, 79, 79, 0.19);
+  color: #5e534d;
+}
+
+.articles a {
   color: #333;
   text-decoration: none;
-  background-color: #EEE;
   margin: .5em;
   padding: 10px;
   border-radius: 4px;
@@ -27,26 +36,24 @@
   font-size: 18px;
 }
 
-.heroes a:hover {
+.articles a:hover {
   color: #2c3a41;
   background-color: #e6e6e6;
 }
 
-.heroes a:active {
+.articles a:active {
   background-color: #525252;
   color: #fafafa;
 }
 
-.heroes .badge {
+.articles .badge {
   display: inline-block;
   font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #405061;
+  color: #edede9;
+  padding: 0.5em 0.7em 0.7em 0.7em;
+  background-color: #5e534d;
   line-height: 1em;
   position: relative;
-  left: -1px;
-  top: -4px;
   height: 1.8em;
   min-width: 16px;
   text-align: right;

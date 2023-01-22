@@ -35,8 +35,11 @@ export class SendTranslationComponent implements OnInit {
       translationDate: ['', Validators.required],
       category: ['', Validators.required],
       translation: ['', Validators.required],
+      imagePath: ['', Validators.required],
+      filePath: ['', Validators.required],
       sender: ['', Validators.required],
-      emailAddress: ['', Validators.required]
+      emailAddress: ['', Validators.required],
+
     })
   }
 
@@ -51,8 +54,8 @@ export class SendTranslationComponent implements OnInit {
       category: this.articleForm.value.category,
       translation: this.articleForm.value.translation,
       isPublished: "nem",
-      imagePath: "",
-      filePath: "",
+      imagePath: this.articleForm.value.imagePath,
+      filePath: this.articleForm.value.filePath,
       readNum: 0,
       sender: this.articleForm.value.sender,
       emailAddress: this.articleForm.value.emailAddress
@@ -63,5 +66,7 @@ export class SendTranslationComponent implements OnInit {
         this.getArticles();
       });
     this.articleForm.reset();
-  }
+
+    alert("Sikeres beküldés")
+    }  
 }

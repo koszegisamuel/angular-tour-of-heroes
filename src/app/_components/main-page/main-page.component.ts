@@ -9,8 +9,8 @@ import { ArticleService } from '@app/_services';
 })
 export class MainPageComponent implements OnInit {
   articles: Article[] = [];
- 
-  //a definite assignment assertion - a változónak futás közben is lesz értéke
+  
+  
   constructor(private articleService: ArticleService) { }
 
   ngOnInit(): void {
