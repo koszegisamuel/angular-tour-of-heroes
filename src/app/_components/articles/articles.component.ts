@@ -14,20 +14,18 @@ export class ArticlesComponent implements OnInit {
 
   articles: Article[] = [];
 
-  // selectedArticle?: Article;
+ 
 
   constructor(private articleService: ArticleService, public auth: AuthService) { }
 
   ngOnInit(): void {
       this.getArticles();
   }
-  // onSelect(hero: Hero): void {
-  //   this.selectedHero = hero;
-  //   this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  // }
+  
 
   getArticles(): void {
     this.articleService.getAllArticles()
-        .subscribe(data => this.articles = data);
+        .subscribe(data => this.articles = Object.values(data))
+        
   }
 }

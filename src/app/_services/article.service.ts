@@ -3,9 +3,7 @@ import { Injectable } from '@angular/core';
 import { Article } from '@app/_models/article';
 import { catchError, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-// import { Hero, HEROES } from '@app/_models';
-// import { Observable, of } from 'rxjs';
-// import { MessageService } from './message.service';
+
 
 const httpOption = {
   headers: new HttpHeaders({
@@ -19,38 +17,34 @@ const httpOption = {
 export class ArticleService {
 
   constructor(
-    // public messageService: MessageService
-    private http: HttpClient
+        private http: HttpClient
     ) { }
 
-//   getHeroes(): Observable<Hero[]> {
-//     const heroes = of(HEROES);
-//     this.messageService.add('HeroService: fetched heroes');
-//     return heroes;
-//   }
-
-//   getHero(id: number): Observable<Hero> {
-//     // For now, assume that a hero with the specified `id` always exists.
-//     // Error handling will be added in the next step of the tutorial.
-//     const hero = HEROES.find(h => h.id === id)!;
-//     this.messageService.add(`HeroService: fetched hero id=${id}`);
-//     return of(hero);
-// }
-
-
     getAllArticles() {
-      return this.http.get<Article[]>(`${environment.apiUrl}/posts`, httpOption)
+      //JSON SERVER
+      // return this.http.get<Article[]>(`${environment.apiUrl}/posts`, httpOption)
+
+      //FIREBASE TRY
+      return this.http.get<Article[]>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data.json`)
     }
 
-    getArticleById(articleId: Number){
-      return this.http.get<Article>(`${environment.apiUrl}/posts/${articleId}`, httpOption)
+    getArticleById(article: Article){
+      //JSON SERVER
+      // return this.http.get<Article>(`${environment.apiUrl}/posts/${articleId}`, httpOption)
+
+      //FIREBASE TRY
+      return this.http.get<Article>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data.json/${article.id}`)
     }
 
     addArticle(article: Article){
-      return this.http.post<Article>(`${environment.apiUrl}/posts`, article, httpOption).pipe(
-        tap(hero => console.log(`inserted hero = ${JSON.stringify(article)}`)),
-        catchError(error => error)
-      );
+      //JSON SERVER
+      // return this.http.post<Article>(`${environment.apiUrl}/posts`, article, httpOption).pipe(
+      //   tap(hero => console.log(`inserted hero = ${JSON.stringify(article)}`)),
+      //   catchError(error => error)
+      // );
+
+      // FIREBASE TRY
+      return this.http.post<Article>('https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data.json', article)
     }
 
     updateArticle(article: Article) {
@@ -60,9 +54,9 @@ export class ArticleService {
       )
     }
 
-    deleteArticle(heroId: Number) {
-      return this.http.delete<Article>(`${environment.apiUrl}/posts/${heroId}`, httpOption).pipe(
-        tap(updatedHero => console.log(`deleted hero with ID =  ${heroId}`)),
+    deleteArticle(articleId: Number) {
+      return this.http.delete<Article>(`${environment.apiUrl}/posts/${articleId}`, httpOption).pipe(
+        tap(updatedHero => console.log(`deleted hero with ID =  ${articleId}`)),
         catchError(error => error)
       )
     }

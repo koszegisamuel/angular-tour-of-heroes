@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
 
   getArticles(): void {
     this.articleService.getAllArticles()
-      .subscribe(data => this.articles = data);
+      .subscribe(data => this.articles = Object.values(data));
   }
 
   createArticleForm() {
@@ -57,6 +57,7 @@ export class DashboardComponent implements OnInit {
       sender:"Admin",
       emailAddress: "japanszemle@gmail.com",
       readNum: 0,
+      id: Math.random() * 10000
     };
 
     this.articleService.addArticle(obj)

@@ -22,7 +22,7 @@ export class SendTranslationComponent implements OnInit {
 
   getArticles(): void {
     this.articleService.getAllArticles()
-      .subscribe(data => this.articles = data);
+      .subscribe(data => this.articles = Object.values(data));
   }
 
   createArticleForm() {
@@ -58,7 +58,8 @@ export class SendTranslationComponent implements OnInit {
       filePath: this.articleForm.value.filePath,
       readNum: 0,
       sender: this.articleForm.value.sender,
-      emailAddress: this.articleForm.value.emailAddress
+      emailAddress: this.articleForm.value.emailAddress,
+      id: Math.random() * 10000
     };
 
     this.articleService.addArticle(obj)

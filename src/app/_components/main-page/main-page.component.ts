@@ -20,7 +20,10 @@ export class MainPageComponent implements OnInit {
 
   getArticles(): void {
     this.articleService.getAllArticles()
-      .subscribe(data => this.articles = data);
+      .subscribe(data => {
+        this.articles = Object.values(data)
+      })
+      ;
   }
 
   
