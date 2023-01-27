@@ -7,13 +7,13 @@ import { ArticleDetailComponent } from './_components';
 const routes: Routes = [
   { path: 'admin/published-list', component: ArticlesComponent },
   { path: 'admin/dashboard', component: DashboardComponent },
-  { path: 'admin', component: LoginComponent},
+  { path: 'admin', component: LoginComponent },
   { path: 'send-translation', component: SendTranslationComponent },
   { path: '', component: MainPageComponent },
   { path: 'detail/:id', component: ArticleDetailComponent },
   { path: 'published/detail/:id', component: PublishedArticleDetailComponent },
   { path: 'admin/dashboard/detail/:id', component: ArticleDetailComponent },
-  { path: '**', component: PageNotFoundComponent}
+  { path: '**', component: PageNotFoundComponent }
 
 ];
 

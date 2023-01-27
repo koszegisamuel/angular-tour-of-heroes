@@ -14,6 +14,7 @@ export interface Article {
     readNum: number;
     sender: string;
     emailAddress: string;
+    firebaseID?: string;
 }
 
 // opcionális paramétert jelent a ? - a json server kezeli az id-kat

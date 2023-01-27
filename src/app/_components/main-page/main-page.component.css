@@ -20,7 +20,6 @@
   color: #f5ebe0;
   font-size: 17px;
   font-weight: 600;
-  
 }
 
 h2 {
@@ -40,19 +39,17 @@ h2 {
   transform: scale(1.03);
 }
 
-  .article-list {
+.article-list {
     padding: 0;
     margin: auto;
     max-width: 1000px;
-  
-    /* flexbox */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: flex-start;
     align-items: flex-start;
-  }
+}
   
   a {
     background-color:#5e534d;
@@ -67,8 +64,6 @@ h2 {
     min-width: 70px;
     margin: .5rem auto;
     box-sizing: border-box;
-  
-    /* flexbox */
     order: 0;
     flex: 0 1 auto;
     align-self: auto;

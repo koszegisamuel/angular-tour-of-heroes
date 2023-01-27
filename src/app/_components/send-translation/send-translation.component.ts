@@ -12,6 +12,8 @@ export class SendTranslationComponent implements OnInit {
   articles: Article[] = [];
   articleForm!: FormGroup;
   
+
+  
   constructor(private articleService: ArticleService,
     private fb: FormBuilder) { }
 
@@ -22,7 +24,7 @@ export class SendTranslationComponent implements OnInit {
 
   getArticles(): void {
     this.articleService.getAllArticles()
-      .subscribe(data => this.articles = Object.values(data));
+      .subscribe(data => this.articles = data);
   }
 
   createArticleForm() {
@@ -60,10 +62,14 @@ export class SendTranslationComponent implements OnInit {
       sender: this.articleForm.value.sender,
       emailAddress: this.articleForm.value.emailAddress,
       id: Math.random() * 10000
+      
+      
     };
 
     this.articleService.addArticle(obj)
-      .subscribe(() => {
+      .subscribe((updatedArticle) => {
+        console.log(updatedArticle)
+        
         this.getArticles();
       });
     this.articleForm.reset();

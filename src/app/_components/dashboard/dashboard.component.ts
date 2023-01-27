@@ -54,16 +54,22 @@ export class DashboardComponent implements OnInit {
       isPublished: this.articleForm.value.isPublished,
       imagePath: "",
       filePath: "",
-      sender:"Admin",
+      sender: "Admin",
       emailAddress: "japanszemle@gmail.com",
       readNum: 0,
-      id: Math.random() * 10000
+      id: Math.random() * 10000,
+      
+
     };
 
     this.articleService.addArticle(obj)
-      .subscribe(() => {
+      .subscribe((id) => {
+        console.log(id)
         this.getArticles();
       });
+
+   
+
     this.articleForm.reset();
   }
 }

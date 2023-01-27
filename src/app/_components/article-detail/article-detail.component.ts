@@ -27,8 +27,8 @@ export class ArticleDetailComponent implements OnInit {
   }
 
   getArticleById(): void {
-    // const id = Number(this.route.snapshot.paramMap.get('id'))
-    this.articleService.getArticleById(this.article)
+    const id = String(this.route.snapshot.paramMap.get('id'))
+    this.articleService.getArticleById(id)
       .subscribe(article => this.article = article);
     console.log(this.article);
   }
@@ -40,8 +40,8 @@ export class ArticleDetailComponent implements OnInit {
   }
 
   delete(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    confirm("Are you sure you want to delete this hero?")
+    const id = String(this.route.snapshot.paramMap.get('id'));
+    confirm("Are you sure you want to delete this article?")
     ?  this.articleService.deleteArticle(id).subscribe(
       () => this.goBack()
     )

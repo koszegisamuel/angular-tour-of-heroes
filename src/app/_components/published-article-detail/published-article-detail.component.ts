@@ -13,6 +13,8 @@ import { ArticleService } from '@app/_services';
 export class PublishedArticleDetailComponent implements OnInit {
   article!: Article;
 
+ 
+
   constructor(
     private route: ActivatedRoute,
     private articleService: ArticleService,
@@ -25,9 +27,9 @@ export class PublishedArticleDetailComponent implements OnInit {
   }
 
   getArticleById(): void {
-    // const id = Number(this.route.snapshot.paramMap.get('id'));
-    // console.log(id);
-    this.articleService.getArticleById(this.article)
+    const id = String(this.route.snapshot.paramMap.get('id'));
+    console.log(id);
+    this.articleService.getArticleById(id)
       .subscribe(article => this.article = article);
     
   }

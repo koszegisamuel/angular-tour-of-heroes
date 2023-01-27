@@ -1,15 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Article } from '@app/_models/article';
-import { catchError, tap } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
+import { catchError, map, tap } from 'rxjs/operators';
 
-
-const httpOption = {
-  headers: new HttpHeaders({
-    'Content-type': 'application/json'
-  })
-}
 
 @Injectable({
   providedIn: 'root'
@@ -17,47 +10,53 @@ const httpOption = {
 export class ArticleService {
 
   constructor(
-        private http: HttpClient
-    ) { }
+    private http: HttpClient
+  ) { }
 
-    getAllArticles() {
-      //JSON SERVER
-      // return this.http.get<Article[]>(`${environment.apiUrl}/posts`, httpOption)
+  getAllArticles() {
+    return this.http.get<Article[]>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data.json`)
+    .pipe(
+      map((response: { [key: string]: any; }) => {
+        const data: Article[] = [];
+        Object.keys(response).forEach(key => {
+          const article: Article = response[key];
+          article.firebaseID = key;
+          data.push(article);
+        });
+        return data;
+      })
+    )
+  }
 
-      //FIREBASE TRY
-      return this.http.get<Article[]>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data.json`)
-    }
+  getArticleById(articleId: String) {
+    return this.http.get<Article>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data/${articleId}.json/`)
 
-    getArticleById(article: Article){
-      //JSON SERVER
-      // return this.http.get<Article>(`${environment.apiUrl}/posts/${articleId}`, httpOption)
+  }
 
-      //FIREBASE TRY
-      return this.http.get<Article>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data.json/${article.id}`)
-    }
+  addArticle(article: Article) {
+    return this.http.post<Article>('https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data.json', article)
+      .pipe(
+        map((response: { [x: string]: any; }) => {
+          article.firebaseID = response['name'];
+          this.http.patch<Article>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data/${article.firebaseID}.json`, article)
+        .subscribe();
+          return article
+         }),
+        
+      );
+  }
 
-    addArticle(article: Article){
-      //JSON SERVER
-      // return this.http.post<Article>(`${environment.apiUrl}/posts`, article, httpOption).pipe(
-      //   tap(hero => console.log(`inserted hero = ${JSON.stringify(article)}`)),
-      //   catchError(error => error)
-      // );
+  updateArticle(article: Article) {
+    return this.http.put<Article>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data/${article.firebaseID}.json/`, article).pipe(
+      tap(updatedArticle => console.log(`updated article = ${JSON.stringify(updatedArticle)}`)),
+      catchError(error => error)
+    )
+  }
 
-      // FIREBASE TRY
-      return this.http.post<Article>('https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data.json', article)
-    }
-
-    updateArticle(article: Article) {
-      return this.http.put<Article>(`${environment.apiUrl}/posts/${article.id}`, article, httpOption).pipe(
-        tap(updatedArticle => console.log(`updated article = ${JSON.stringify(updatedArticle)}`)),
-        catchError(error => error)
-      )
-    }
-
-    deleteArticle(articleId: Number) {
-      return this.http.delete<Article>(`${environment.apiUrl}/posts/${articleId}`, httpOption).pipe(
-        tap(updatedHero => console.log(`deleted hero with ID =  ${articleId}`)),
-        catchError(error => error)
-      )
-    }
+  deleteArticle(articleId: String) {
+    return this.http.delete<Article>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data/${articleId}.json/`).pipe(
+      tap(updatedArticle => console.log(`deleted article with ID =  ${articleId}`)),
+      catchError(error => error)
+    )
+  }
 }
