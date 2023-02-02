@@ -41,3 +41,9 @@ button:disabled {
   color: #6f635c;
   font-size: 20px;
 }
+
+input[type=radio] {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}

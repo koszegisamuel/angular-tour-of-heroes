@@ -40,8 +40,7 @@ export class SendTranslationComponent implements OnInit {
       imagePath: ['', Validators.required],
       filePath: ['', Validators.required],
       sender: ['', Validators.required],
-      emailAddress: ['', Validators.required],
-
+      emailAddress: ['', Validators.required]
     })
   }
 

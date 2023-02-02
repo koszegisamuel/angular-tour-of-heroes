@@ -12,7 +12,9 @@ import { PageNotFoundComponent } from './_components/page-not-found/page-not-fou
 import { SendTranslationComponent } from './_components/send-translation/send-translation.component';
 import { MainPageComponent } from './_components/main-page/main-page.component';
 import { PublishedArticleDetailComponent } from './_components/published-article-detail/published-article-detail.component';
-import { LoginComponent } from './_components'
+import { LoginComponent } from './_components';
+import { CreativecommonsComponent, AboutComponent } from './_components/_staticComponents';
+
 
 
 
@@ -26,7 +28,9 @@ import { LoginComponent } from './_components'
     SendTranslationComponent,
     MainPageComponent,
     PublishedArticleDetailComponent,
-    LoginComponent
+    LoginComponent,
+    CreativecommonsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

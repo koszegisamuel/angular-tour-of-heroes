@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row mt-3">
         <h1>Itt küldd be a fordításaidat</h1>
-        
+
         <div class="instructions">
             <h2>A beküldés során a következőkre figyelj:</h2>
             <ul>
@@ -12,8 +12,8 @@
                     Helyesen add meg az email címed
                 </li>
                 <li>
-                    Olyan letöltési linket adj meg a 
-                    képhez és a fájlhoz is, amelyet szabadon meg 
+                    Olyan letöltési linket adj meg a
+                    képhez és a fájlhoz is, amelyet szabadon meg
                     tudunk nézni és ezt követően letölteni
                 </li>
                 <li>
@@ -93,6 +93,12 @@
                     Email címe:
                     <input type="email" formControlName="emailAddress" id="emailAddress">
                 </label>
+                <br>
+                <br>
+                <label for="creative">
+                    Fordításom beküldésével elfogadom a <a routerLink="/creative-commons" target="_blank">Creative Commons</a> szabályát.
+                </label>
+                <input id="creative" type="radio" formControlName="creative" checked>
             </div>
             <button style="width: 100px;" [disabled]="!articleForm.valid" type="submit">Beküldés</button>
         </form>
