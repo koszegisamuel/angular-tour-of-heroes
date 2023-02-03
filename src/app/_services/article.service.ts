@@ -47,7 +47,8 @@ export class ArticleService {
   }
 
   updateArticle(article: Article) {
-    return this.http.put<Article>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data/${article.firebaseID}.json/`, article).pipe(
+    return this.http.put<Article>(`https://japan-szemle-23187-default-rtdb.europe-west1.firebasedatabase.app/data/${article.firebaseID}.json
+    `, article).pipe(
       tap(updatedArticle => console.log(`updated article = ${JSON.stringify(updatedArticle)}`)),
       catchError(error => error)
     )

@@ -37,6 +37,10 @@ h2 {
   transform: scale(1.03);
 }
 
+.card-title, .card-text {
+  color: #433b37;
+}
+
 .article-list {
     padding: 0;
     margin: auto;

@@ -3,6 +3,10 @@ img {
     max-height: 500px;
 }
 
+.card {
+    background-color: #ccc4bb;
+}
+
 .category-label {
     background-color: #5e534d;
     margin-top: 25px;

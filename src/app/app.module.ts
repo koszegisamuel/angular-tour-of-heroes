@@ -13,10 +13,11 @@ import { SendTranslationComponent } from './_components/send-translation/send-tr
 import { MainPageComponent } from './_components/main-page/main-page.component';
 import { PublishedArticleDetailComponent } from './_components/published-article-detail/published-article-detail.component';
 import { LoginComponent } from './_components';
-import { CreativecommonsComponent, AboutComponent, PrivacyComponent, SupportUsComponent } from './_components/_staticComponents';
+import { CreativecommonsComponent, AboutComponent, PrivacyComponent, SupportUsComponent, EditorsComponent } from './_components/_staticComponents';
 import { CatLyricsComponent } from './_components/cat-lyrics/cat-lyrics.component';
 import { CatPoemsComponent } from './_components/cat-poems/cat-poems.component';
 import { CatProseComponent } from './_components/cat-prose/cat-prose.component';
+
 
 
 
@@ -39,7 +40,8 @@ import { CatProseComponent } from './_components/cat-prose/cat-prose.component';
     SupportUsComponent,
     CatLyricsComponent,
     CatPoemsComponent,
-    CatProseComponent
+    CatProseComponent,
+    EditorsComponent
   ],
   imports: [
     BrowserModule,

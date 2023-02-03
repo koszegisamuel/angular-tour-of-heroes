@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ArticlesComponent } from '@app/_components/articles/articles.component';
 import { CatLyricsComponent, CatPoemsComponent, CatProseComponent, DashboardComponent, LoginComponent, MainPageComponent, PageNotFoundComponent, PublishedArticleDetailComponent, SendTranslationComponent } from './_components';
 import { ArticleDetailComponent } from './_components';
-import { AboutComponent, CreativecommonsComponent, PrivacyComponent, SupportUsComponent } from './_components/_staticComponents';
+import { AboutComponent, CreativecommonsComponent, EditorsComponent, PrivacyComponent, SupportUsComponent } from './_components/_staticComponents';
 
 const routes: Routes = [
   { path: 'admin/published-list', component: ArticlesComponent },
@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: 'category/lyrics', component: CatLyricsComponent },
   { path: 'category/poems', component: CatPoemsComponent },
   { path: 'category/prose', component: CatProseComponent },
+  { path: 'editors', component: EditorsComponent },
   { path: '**', component: PageNotFoundComponent }
 
 ];
