@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArticlesComponent } from '@app/_components/articles/articles.component';
-import { DashboardComponent, LoginComponent, MainPageComponent, PageNotFoundComponent, PublishedArticleDetailComponent, SendTranslationComponent } from './_components';
+import { CatLyricsComponent, CatPoemsComponent, CatProseComponent, DashboardComponent, LoginComponent, MainPageComponent, PageNotFoundComponent, PublishedArticleDetailComponent, SendTranslationComponent } from './_components';
 import { ArticleDetailComponent } from './_components';
-import { AboutComponent, CreativecommonsComponent } from './_components/_staticComponents';
+import { AboutComponent, CreativecommonsComponent, PrivacyComponent, SupportUsComponent } from './_components/_staticComponents';
 
 const routes: Routes = [
   { path: 'admin/published-list', component: ArticlesComponent },
@@ -16,6 +16,11 @@ const routes: Routes = [
   { path: 'admin/dashboard/detail/:id', component: ArticleDetailComponent },
   { path: 'creative-commons', component: CreativecommonsComponent },
   { path: 'about-us', component: AboutComponent },
+  { path: 'privacy', component: PrivacyComponent },
+  { path: 'support-us', component: SupportUsComponent },
+  { path: 'category/lyrics', component: CatLyricsComponent },
+  { path: 'category/poems', component: CatPoemsComponent },
+  { path: 'category/prose', component: CatProseComponent },
   { path: '**', component: PageNotFoundComponent }
 
 ];

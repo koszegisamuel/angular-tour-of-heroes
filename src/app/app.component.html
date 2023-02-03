@@ -18,13 +18,13 @@
                                 class="ms-1 d-none d-sm-inline">Fordítások</span> </a>
                         <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                             <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-sm-inline">Próza</span></a>
+                                <a  routerLink="/category/prose" class="nav-link px-0"> <span class="d-sm-inline">Próza</span></a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-sm-inline">Vers</span></a>
+                                <a routerLink="/category/poems" class="nav-link px-0"> <span class="d-sm-inline">Vers</span></a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-sm-inline">Dalszöveg</span></a>
+                                <a routerLink="/category/lyrics"class="nav-link px-0"> <span class="d-sm-inline">Dalszöveg</span></a>
                             </li>
                         </ul>
                     </li>
@@ -67,7 +67,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-sm-inline">Támogatóink</span>
+                                <a routerLink="/support-us" class="nav-link px-0"> <span class="d-sm-inline">Támogatás</span>
                                 </a>
                             </li>
                         </ul>
@@ -82,7 +82,7 @@
                                 <a routerLink="/creative-commons" class="nav-link px-0"> <span class="d-sm-inline">Creative Commons</span></a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-sm-inline">Adatvédelmi
+                                <a routerLink="/privacy" class="nav-link px-0"> <span class="d-sm-inline">Adatvédelmi
                                         nyilatkozat</span></a>
                             </li>
 
@@ -118,4 +118,35 @@
             <router-outlet></router-outlet>
         </div>
     </div>
+
+</div>
+
+<div class="container-fluid footer-container">
+    <footer>
+        <ul>
+            <li>
+                <a routerLink="/about-us">
+                    Rólunk
+                </a>
+            </li>
+            <li>
+                <a routerLink="/send-translation">
+                    Fordítás beadása
+                </a>
+            </li>
+            <li>
+                <a routerLink="/support-us">
+                    Támogatás
+                </a>
+            </li>
+            <li>
+                <a routerLink="/admin">
+                    Admin
+                </a>
+            </li>
+        </ul>
+        <p class="copyright">
+            JapánSzemle - Minden jog fenntartva
+        </p>
+    </footer>
 </div>

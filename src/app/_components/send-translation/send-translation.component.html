@@ -63,7 +63,7 @@
                 <label for="category" class="form-label">Kategória</label>
                 <select class="form-select form-select-" name="category" id="category" formControlName="category">
                     <option value="vers">Vers</option>
-                    <option value="novella">Novella</option>
+                    <option value="próza">Próza</option>
                     <option value="dalszöveg">Dalszöveg</option>
 
                 </select>
@@ -95,10 +95,14 @@
                 </label>
                 <br>
                 <br>
+
                 <label for="creative">
                     Fordításom beküldésével elfogadom a <a routerLink="/creative-commons" target="_blank">Creative Commons</a> szabályát.
                 </label>
-                <input id="creative" type="radio" formControlName="creative" checked>
+                <select class="form-select form-select-" name="category" id="creative" formControlName="creative">
+                    <option value="igen">Igen</option>
+                </select>
+                
             </div>
             <button style="width: 100px;" [disabled]="!articleForm.valid" type="submit">Beküldés</button>
         </form>

@@ -40,3 +40,65 @@ i {
   display: block;
 }
 
+.footer-container {
+  padding: 0;
+}
+
+footer {
+  height: 70px;
+  background-color: #6c6059; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+footer li {
+  list-style: none;
+  transition: 0.4s;
+  padding-left: 35px;
+}
+
+footer li a {
+  text-decoration: none;
+  color: #f5ebe0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+footer li:hover {
+  transform: scale(1.06);
+}
+
+.copyright {
+  color: #f5ebe0;
+  font-size: 14px;
+}
+
+@media (max-width: 575px)  {
+  footer {
+    height: auto;
+  }
+  
+  footer ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer li {
+    padding-left: 0;
+    margin-bottom: 7px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    
+  }
+
+}

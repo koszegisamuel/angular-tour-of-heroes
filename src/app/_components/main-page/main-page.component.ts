@@ -10,7 +10,6 @@ import { ArticleService } from '@app/_services';
 export class MainPageComponent implements OnInit {
   articles: Article[] = [];
   
-  
   constructor(private articleService: ArticleService) { }
 
   ngOnInit(): void {
@@ -23,7 +22,7 @@ export class MainPageComponent implements OnInit {
       .subscribe(data => {
         this.articles = Object.values(data)
       })
-      ;
+      
   }
 
   
