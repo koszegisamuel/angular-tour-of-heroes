@@ -1,11 +1,11 @@
 
 .articles {
   list-style-type: none;
-  padding: 20px;
-  
+  padding: 20px; 
 }
+
 .articles li {
-  position: relative;
+  position: relative; 
   cursor: pointer;
   margin-top: 10px;
 }
@@ -27,7 +27,7 @@
 .articles a {
   color: #333;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px; 
   border-radius: 4px;
   display: block;
   width: 100%;
@@ -49,7 +49,7 @@
   display: inline-block;
   font-size: small;
   color: #edede9;
-  padding: 0.5em 0.7em 0.7em 0.7em;
+  padding: 0.5em 0.7em 0.7em 0.7em; 
   background-color: #5e534d;
   line-height: 1em;
   position: relative;
@@ -62,4 +62,14 @@
 
 .title {
   margin-left: 15px;
+}
+
+@media (max-width: 775px) {
+  .articles .badge {
+    font-size: 14px;
+  }
+
+  .articles {
+    padding: 0px; 
+  }
 }

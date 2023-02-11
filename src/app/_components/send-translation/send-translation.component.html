@@ -1,33 +1,34 @@
 <div class="container">
     <div class="row mt-4">
         <h1>Új fordítások beküldése</h1>
-
-        <div class="instructions">
-            <h2>A beküldés során a következőkre figyeljen:</h2>
-            <ul>
-                <li>
-                    Minden mező kitöltése közelező!
-                </li>
-                <li>
-                    Amennyiben esetleg valamelyik mezőt mégis üresen szükséges hagyni 
-                    (pl. fordító gondolatai), kérjük, egy "-" jelet írjon abba a mezőbe.
-                </li>
-                <li>
-                    Helyesen adja meg email címét, hogy kapcsolatba léphessünk Önnel!
-                </li>
-                <li>
-                    Olyan letöltési linket adjon meg a
-                    képhez és a fájlhoz is, amelyhez szabadon hozzá tudunk férni és
-                    azt követően letölteni.
-                </li>
-                <li>
-                    A fordított műhöz tartozó fájl formátuma mindenképpen pdf legyen.
-                </li>
-                <li>
-                    Kérdések esetén kérjük, a japanszemle@gmail.com email címre írjon!
-                </li>
-            </ul>
-            <h3>Köszönjük hozzájárulását!</h3>
+        <div class="col col-12">
+            <div class="instructions">
+                <h2>A beküldés során a következőkre figyeljen:</h2>
+                <ul>
+                    <li>
+                        Minden mező kitöltése közelező!
+                    </li>
+                    <li>
+                        Amennyiben esetleg valamelyik mezőt mégis üresen szükséges hagyni
+                        (pl. fordító gondolatai), kérjük, egy "-" jelet írjon abba a mezőbe.
+                    </li>
+                    <li>
+                        Helyesen adja meg email címét, hogy kapcsolatba léphessünk Önnel!
+                    </li>
+                    <li>
+                        Olyan letöltési linket adjon meg a
+                        képhez és a fájlhoz is, amelyhez szabadon hozzá tudunk férni és
+                        azt követően letölteni.
+                    </li>
+                    <li>
+                        A fordított műhöz tartozó fájl formátuma mindenképpen pdf legyen.
+                    </li>
+                    <li>
+                        Kérdések esetén kérjük, a <span>japanszemle@gmail.com</span>  email címre írjon!
+                    </li>
+                </ul>
+                <h3>Köszönjük hozzájárulását!</h3>
+            </div>
         </div>
     </div>
     <div class="row mt-4">
@@ -102,7 +103,8 @@
                 <br>
 
                 <label for="creative">
-                    Fordításom beküldésével elfogadom a <a routerLink="/creative-commons" target="_blank">Creative Commons</a> szabályát.
+                    Fordításom beküldésével elfogadom a <a routerLink="/creative-commons" target="_blank">Creative
+                        Commons</a> szabályát.
                 </label>
                 <select class="form-select form-select-" name="category" id="creative" formControlName="creative">
                     <option value="igen">Igen</option>
@@ -110,7 +112,7 @@
                 <br>
                 <p *ngIf="!articleForm.valid" class="invalid">* Kérjük minden mezőt töltsön ki!</p>
                 <p *ngIf="articleForm.valid" class="valid">* Megfelelő kitöltés!</p>
-                
+
             </div>
             <button style="width: 100px;" [disabled]="!articleForm.valid" type="submit">Beküldés</button>
         </form>

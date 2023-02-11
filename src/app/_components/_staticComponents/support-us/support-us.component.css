@@ -7,3 +7,10 @@ p {
 h4 {
     color: #6f635c;
 }
+
+@media (max-width: 575px) {
+    
+    .support-link {
+        font-size: 14px;
+    }
+}
