@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '@app/_services';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,8 @@ import { AuthService } from '@app/_services';
 })
 
 export class LoginComponent {
+  usernameEnv = environment.adminUsername;
+  passwordEnv = environment.adminPassword;
   username!: string;
   password!: string;
   loggedIn: any;
@@ -15,7 +18,7 @@ export class LoginComponent {
   constructor(public auth: AuthService){ }
 
   login() {
-    if (this.username === 'matyas' && this.password === 'Zsolnaynegyed12') {
+    if (this.username === this.usernameEnv && this.password === this.passwordEnv) {
       this.auth.loggedIn = true;
       localStorage.setItem('loggedIn', 'true');
     }

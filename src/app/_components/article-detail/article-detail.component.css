@@ -30,21 +30,21 @@ button:disabled {
     color: #84756c;
     cursor: auto;
   }
-  input, select option {
-      display: inline-block; 
-      padding: 10px; 
-      font-size: 18px; 
-      border: solid 2px #6c6059;
-      background-color: #f5ebe0 ;
-      color:#011a1b; 
-      font-weight: bold; 
-      width: 100%; 
-      margin-bottom: 2px;
+input, select option {
+    display: inline-block; 
+    padding: 10px; 
+    font-size: 18px; 
+    border: solid 2px #6c6059;
+    background-color: #f5ebe0 ;
+    color:#011a1b; 
+    font-weight: bold; 
+    width: 100%; 
+    margin-bottom: 2px;
   }
   
   
   
-  label, option {
+label, option {
     display: inline-block; 
     font-size: 22px; 
     color: #5e534d;

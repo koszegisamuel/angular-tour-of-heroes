@@ -42,43 +42,61 @@ h2 {
 }
 
 .article-list {
-    padding: 0;
-    margin: auto;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: flex-start;
-    align-items: flex-start;
+  padding: 0;
+  margin: auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
 }
   
-  a {
-    background-color:#5e534d;
-    border-radius: 4px;
-    padding: 1rem;
-    font-size: 1.2rem;
-    text-decoration: none;
-    display: inline-block;
-    color: whitesmoke;
-    text-align: center;
-    min-width: 70px;
-    margin: .5rem auto;
-    box-sizing: border-box;
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-  }
+a {
+  background-color:#5e534d;
+  border-radius: 4px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+  color: whitesmoke;
+  text-align: center;
+  min-width: 70px;
+  margin: .5rem auto;
+  box-sizing: border-box;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
 
-  a:hover {
-    background-color: whitesmoke;
-    color: #5e534d;
-  }
+a:hover {
+  background-color: whitesmoke;
+  color: #5e534d;
+}
   
 form {
   display: flex;
   flex-direction: column;
 }
+
+.banner-row {
+  background: url(../../../assets/img/banner.jpg);
+  background-position-y: bottom;
+  background-size: cover;
+  padding: 60px;
+  border-radius: 20px;
+}
+
+.banner {
+  background-color: #5e544cf8;
+  padding: 25px 0px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #f6ebde;
+  line-height: 1.6;
+}
+
 
 .container nav ul {
   display: flex;
@@ -96,6 +114,7 @@ form {
   width: auto;
 }
 
+
   @media (max-width: 775px) {
     a {
       width: 18%;
@@ -104,6 +123,11 @@ form {
   
     .container nav ul {
       flex-direction: column;
+    }
+
+    .banner {
+      font-size: 20px;
+      padding: 25px 10px;
     }
   
 }

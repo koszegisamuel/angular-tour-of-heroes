@@ -1,10 +1,9 @@
- 
 * {
     font-family: Arial, Helvetica, sans-serif;
   }
 
 body {
-    background: #edede9;
+    background: url(./assets/img/background.jpg);
 }
 
 h1 {
@@ -47,9 +46,9 @@ button:disabled {
 form {
     display: flex;
     width: 100%;
-    align-items: flex-start;
+    align-items: flex-start; 
     flex-direction: column;
-    padding-left: 40px;
+    padding-left: 40px; 
 }
 
 input[type=text],
@@ -67,8 +66,6 @@ select option {
     width: 100%; 
     margin-bottom: 2px;
 }
-
-
 
 label, option {
   display: inline-block; 

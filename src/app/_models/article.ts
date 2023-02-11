@@ -17,4 +17,3 @@ export interface Article {
     firebaseID?: string;
 }
 
-// opcionális paramétert jelent a ? - a json server kezeli az id-kat
