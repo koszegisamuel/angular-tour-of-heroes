@@ -23,7 +23,6 @@ const routes: Routes = [
   { path: 'category/prose', component: CatProseComponent },
   { path: 'editors', component: EditorsComponent },
   { path: '**', component: PageNotFoundComponent }
-
 ];
 
 @NgModule({

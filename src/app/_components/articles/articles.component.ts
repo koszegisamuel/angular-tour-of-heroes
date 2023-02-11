@@ -10,11 +10,8 @@ import { Article } from '@app/_models';
   styleUrls: ['./articles.component.css']
 })
 export class ArticlesComponent implements OnInit {
-  //itt megadott metódusok a komponens betöltésekor autamituksan meghívódnak
 
   articles: Article[] = [];
-
- 
 
   constructor(private articleService: ArticleService, public auth: AuthService) { }
 
@@ -22,7 +19,6 @@ export class ArticlesComponent implements OnInit {
       this.getArticles();
   }
   
-
   getArticles(): void {
     this.articleService.getAllArticles()
         .subscribe(data => this.articles = Object.values(data))

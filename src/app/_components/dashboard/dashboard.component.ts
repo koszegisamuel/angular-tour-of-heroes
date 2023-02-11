@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
 
   articles: Article[] = [];
   articleForm!: FormGroup;
-  //a definite assignment assertion - a változónak futás közben is lesz értéke
+  
   constructor(private articleService: ArticleService,
     private fb: FormBuilder, public auth: AuthService) { }
 

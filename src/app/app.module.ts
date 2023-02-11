@@ -18,11 +18,6 @@ import { CatLyricsComponent } from './_components/cat-lyrics/cat-lyrics.componen
 import { CatPoemsComponent } from './_components/cat-poems/cat-poems.component';
 import { CatProseComponent } from './_components/cat-prose/cat-prose.component';
 
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

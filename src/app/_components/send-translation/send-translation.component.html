@@ -1,28 +1,33 @@
 <div class="container">
-    <div class="row mt-3">
-        <h1>Itt küldd be a fordításaidat</h1>
+    <div class="row mt-4">
+        <h1>Új fordítások beküldése</h1>
 
         <div class="instructions">
-            <h2>A beküldés során a következőkre figyelj:</h2>
+            <h2>A beküldés során a következőkre figyeljen:</h2>
             <ul>
                 <li>
-                    Minden mezőt tölts ki
+                    Minden mező kitöltése közelező!
                 </li>
                 <li>
-                    Helyesen add meg az email címed
+                    Amennyiben esetleg valamelyik mezőt mégis üresen szükséges hagyni 
+                    (pl. fordító gondolatai), kérjük, egy "-" jelet írjon abba a mezőbe.
                 </li>
                 <li>
-                    Olyan letöltési linket adj meg a
-                    képhez és a fájlhoz is, amelyet szabadon meg
-                    tudunk nézni és ezt követően letölteni
+                    Helyesen adja meg email címét, hogy kapcsolatba léphessünk Önnel!
                 </li>
                 <li>
-                    A fordított műhöz tartozó fájl formátuma pdf legyen
+                    Olyan letöltési linket adjon meg a
+                    képhez és a fájlhoz is, amelyhez szabadon hozzá tudunk férni és
+                    azt követően letölteni.
                 </li>
                 <li>
-                    Igyál sört!
+                    A fordított műhöz tartozó fájl formátuma mindenképpen pdf legyen.
+                </li>
+                <li>
+                    Kérdések esetén kérjük, a japanszemle@gmail.com email címre írjon!
                 </li>
             </ul>
+            <h3>Köszönjük hozzájárulását!</h3>
         </div>
     </div>
     <div class="row mt-4">
@@ -102,6 +107,9 @@
                 <select class="form-select form-select-" name="category" id="creative" formControlName="creative">
                     <option value="igen">Igen</option>
                 </select>
+                <br>
+                <p *ngIf="!articleForm.valid" class="invalid">* Kérjük minden mezőt töltsön ki!</p>
+                <p *ngIf="articleForm.valid" class="valid">* Megfelelő kitöltés!</p>
                 
             </div>
             <button style="width: 100px;" [disabled]="!articleForm.valid" type="submit">Beküldés</button>

@@ -1,35 +1,40 @@
 <div class="container">
     <div class="row text-center mt-4">
-        <h1>Üdvözlünk a Japán Szemle oldalán!</h1>
+        <h1 style="font-weight: 600;">Üdvözöljük a Japán Szemle oldalán!</h1>
+    </div>
+</div>
+<div class="container mt-5 mb-3">
+    <div class="row banner-row">
+        <h2 class="banner">Japán irodalom magyar nyelven mindenki számára!</h2>
     </div>
 </div>
 
-<div class="container mt-4">
-    <nav>
+<div class="container mt-5">
+    <h2>Legutóbbi megjelenések</h2>
+    <div class="row mt-3">
+        <nav>
         
-        <ul>
-            <li>
-                <a routerLink="/category/prose">
-                    Próza
-                </a>
-            </li>
-            <li>
-                <a routerLink="/category/poems">
-                    Vers
-                </a>
-            </li>
-            <li>
-                <a routerLink="/category/lyrics">
-                    Dalszöveg
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div>
-
-<div class="container">
-    <div class="row justify-content-center gy-3 mt-3 mb-4">
-        <h2>Legutóbbi megjelenések</h2>
+            <ul>
+                <li>
+                    <a routerLink="/category/prose">
+                        Próza
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/category/poems">
+                        Vers
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/category/lyrics">
+                        Dalszöveg
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row justify-content-center gy-3 mb-4">
+        
         <div *ngIf="articles" class="article-list">
             <div class="col-12 col-md-6 col-lg-4 mt-4 h-100" *ngFor="let article of articles ">
                 <div  *ngIf="article.isPublished === 'igen'">

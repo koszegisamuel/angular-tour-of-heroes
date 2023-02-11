@@ -12,8 +12,6 @@ export class SendTranslationComponent implements OnInit {
   articles: Article[] = [];
   articleForm!: FormGroup;
   
-
-  
   constructor(private articleService: ArticleService,
     private fb: FormBuilder) { }
 
@@ -61,9 +59,7 @@ export class SendTranslationComponent implements OnInit {
       readNum: 0,
       sender: this.articleForm.value.sender,
       emailAddress: this.articleForm.value.emailAddress,
-      id: Math.random() * 10000
-      
-      
+      id: Math.random() * 10000   
     };
 
     this.articleService.addArticle(obj)

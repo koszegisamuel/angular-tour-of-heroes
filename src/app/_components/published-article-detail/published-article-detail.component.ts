@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Article } from '@app/_models';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -12,8 +12,6 @@ import { ArticleService } from '@app/_services';
 })
 export class PublishedArticleDetailComponent implements OnInit {
   article!: Article;
-
- 
 
   constructor(
     private route: ActivatedRoute,

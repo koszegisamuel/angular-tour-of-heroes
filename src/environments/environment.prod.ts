@@ -1,4 +1,5 @@
 export const environment = {
-    produiction: true,
-    apiUrl: "http://localhost:3000"
+    production: true,
+    adminUsername: 'admin',
+    adminPassword: '12345'
 }
