@@ -1,1 +1,2 @@
-export * from './hero.service';
+export * from './article.service';
+export * from './auth.service';
